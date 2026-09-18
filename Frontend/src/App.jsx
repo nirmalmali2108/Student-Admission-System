@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Signup from "./pages/Signup";
-import Login from "./pages/Login";
-import ForgotPassword from "./pages/forgotpassword";
+import Signup from "./pages/signup";
+import Login from "./pages/login";
+import ForgotPassword from "./pages/editprofile";
 import StudentRegistration from "./pages/StudentRegistration";
 import Dashboard from "./pages/dashboard";
 import UploadDocuments from "./pages/uploaddocuments";
