@@ -1,4 +1,4 @@
-const DocumentTrack = require("../models/documenttrack");
+const DocumentTrack = require("../models/DocumentTrack");
 
 const uploadDocument = async (req, res) => {
     try {
