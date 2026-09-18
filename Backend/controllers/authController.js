@@ -126,7 +126,7 @@ const login = async (req, res) => {
                 studentid: student.studentid,
                 username: student.username
             },
-            process.env.jwt_secret,
+            process.env.JWT_SECRET,
             {
                 expiresIn: "1d"
             }
