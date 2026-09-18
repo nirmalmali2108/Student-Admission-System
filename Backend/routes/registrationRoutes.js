@@ -3,14 +3,14 @@ const express = require("express");
 const router = express.Router();
 
 const authMiddleware =
-    require("../middleware/authmiddleware");
+    require("../middleware/authMiddleware");
 
 const {
     createRegistration,
     getRegistration,
     updateRegistration,
     deleteRegistration
-} = require("../controllers/registrationcontroller");
+} = require("../controllers/registrationController");
 
 
 // CREATE

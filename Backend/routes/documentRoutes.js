@@ -6,12 +6,12 @@ const authMiddleware =
     require("../middleware/authMiddleware");
 
 const upload =
-    require("../middleware/uploadmiddleware");
+    require("../middleware/uploadMiddleware");
 
 const {
     uploadDocument,
     getDocuments
-} = require("../controllers/documentcontroller");
+} = require("../controllers/documentController");
 
 
 router.post(
