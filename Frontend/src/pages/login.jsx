@@ -24,7 +24,7 @@ function Login() {
         try {
 
             const response = await axios.post(
-                "http://localhost:8000/api/auth/login",
+                "https://student-admission-system-8ixw.onrender.com",
                 formData
             );
 

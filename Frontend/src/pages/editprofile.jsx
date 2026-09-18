@@ -16,7 +16,7 @@ function EditProfile() {
     const getProfile = async () => {
         try {
             const response = await axios.get(
-                "http://localhost:8000/api/registration",
+                "https://student-admission-system-8ixw.onrender.com",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -78,7 +78,7 @@ function EditProfile() {
 
         try {
             const response = await axios.put(
-                "http://localhost:8000/api/registration",
+                "https://student-admission-system-8ixw.onrender.com",
                 formData,
                 {
                     headers: {

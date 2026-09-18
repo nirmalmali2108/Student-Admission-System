@@ -52,7 +52,7 @@ function StudentRegistration() {
 
         try {
             const response = await axios.post(
-                "http://localhost:8000/api/registration",
+                "https://student-admission-system-8ixw.onrender.com",
                 formData,
                 {
                     headers: {

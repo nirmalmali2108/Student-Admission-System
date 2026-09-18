@@ -31,7 +31,7 @@ function UploadDocuments() {
         try {
 
             const response = await axios.post(
-                "http://localhost:8000/api/documents/upload",
+                "https://student-admission-system-8ixw.onrender.com",
                 formData,
                 {
                     headers: {

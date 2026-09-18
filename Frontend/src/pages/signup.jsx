@@ -43,7 +43,7 @@ function Signup() {
         try {
 
             const response = await axios.post(
-                "http://localhost:8000/api/auth/signup",
+                "https://student-admission-system-8ixw.onrender.com",
                 {
                     studentname: formData.name,
                     email: formData.email,
