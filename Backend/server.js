@@ -13,8 +13,8 @@ app.use(express.json());
 
 const authRoutes = require("./routes/authRoutes");
 const testRoutes = require("./routes/testroutes");
-const registrationRoutes=require("./routes/registrationroutes")
-const documentRoutes=require("./routes/documentroutes");
+const registrationRoutes=require("./routes/registrationRoutes")
+const documentRoutes=require("./routes/documentRoutes");
 
 
 app.use("/api/auth", authRoutes);
