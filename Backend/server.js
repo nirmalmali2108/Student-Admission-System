@@ -1,7 +1,6 @@
 const express=require("express");
 const cors=require("cors");
 const dotenv=require("dotenv");
-const authRoutes=require("./routes/authRoutes");
 
 const connectdb=require("./config/db");
 dotenv.config();
@@ -12,19 +11,11 @@ const app=express();
 app.use(cors());
 app.use(express.json());
 
-const connectDB = require("./config/db");
-
 const authRoutes = require("./routes/authRoutes");
 const testRoutes = require("./routes/testroutes");
 const registrationRoutes=require("./routes/registrationroutes")
 const documentRoutes=require("./routes/documentroutes");
 
-dotenv.config();
-
-connectDB();
-
-app.use(cors());
-app.use(express.json());
 
 app.use("/api/auth", authRoutes);
 app.use("/api/test", testRoutes);
