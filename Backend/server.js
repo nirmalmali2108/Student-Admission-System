@@ -1,45 +1,39 @@
-const express=require("express");
-const cors=require("cors");
-const dotenv=require("dotenv");
+const express = require("express");
+const cors = require("cors");
+const dotenv = require("dotenv");
 
-const connectdb=require("./config/db");
+const connectDB = require("./config/db");
+
+const authRoutes = require("./routes/authRoutes");
+const testRoutes = require("./routes/testroutes");
+const registrationRoutes = require("./routes/registrationRoutes");
+const documentRoutes = require("./routes/documentRoutes");
+
 dotenv.config();
-connectdb();
 
-const app=express();
+connectDB();
+
+const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-const authRoutes = require("./routes/authRoutes");
-const testRoutes = require("./routes/testroutes");
-const registrationRoutes=require("./routes/registrationRoutes")
-const documentRoutes=require("./routes/documentRoutes");
-
-
+// API Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/test", testRoutes);
-app.use("/api/registration",registrationRoutes);
-app.use("/api/documents",documentRoutes)
+app.use("/api/registration", registrationRoutes);
+app.use("/api/documents", documentRoutes);
 
+// Uploaded files
+app.use("/uploads", express.static("uploads"));
+
+// Home route
 app.get("/", (req, res) => {
     res.send("Student Admission Backend is Running");
 });
 
 const PORT = process.env.PORT || 8000;
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
     console.log(`Server running on port ${PORT}`);
-});
-app.use("/api/auth",authRoutes);
-
-app.use("/uploads",express.static("uploads"));
-
-app.get("/",(req,res)=>{
-    res.send("Student Admission Backend is Running");
-});
-
-const port=process.env.PORT;
-app.listen(port,()=>{
-    console.log(`Server is Running on Port${port}`);
 });
