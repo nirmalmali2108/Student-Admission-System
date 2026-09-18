@@ -48,7 +48,7 @@ app.get("/",(req,res)=>{
     res.send("Student Admission Backend is Running");
 });
 
-const port=process.env.port;
+const port=process.env.PORT;
 app.listen(port,()=>{
     console.log(`Server is Running on Port${port}`);
 });
